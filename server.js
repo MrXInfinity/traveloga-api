@@ -10,6 +10,7 @@ const rateLimiter = require("rate-limiter")
 //Basic setup
 const express = require("express")
 const app = express()
+const path = require('path')
 
 //Connect DB
 const connectDB = require("./db/connect")
@@ -40,6 +41,8 @@ app.use(express.json());
 app.use(helmet());
 app.use(cors());
 app.use(xss());
+
+app.use('/', express.static(path.join(__dirname, 'public'))) 
 
 //Routes
 app.use("/api/v1/bookings", authenticateUser, bookingsRouter)

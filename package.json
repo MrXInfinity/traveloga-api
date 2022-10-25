@@ -2,11 +2,12 @@
   "name": "tailwind_mern_project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "dev": "nodemon server",
     "start": "node server"
   },
-  "author": "",
+  "author": "Johann Isaiah Mendoza",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
