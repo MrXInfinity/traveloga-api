@@ -13,37 +13,44 @@ const destinationSchema = new mongoose.Schema({
     },
     domestic: {
         availableRegions: {type: Array, default: ["Luzon", "Visayas", "Mindanao"]},
-        travelIn: {type: Number, default: 2500},
-        travelOut: {type: Number, default: 2500},
-        hotelFee: {type: Number, default: 5500}
+        travelIn: {type: Number, default: 3000},
+        travelOut: {type: Number, default: 3000},
+        hotelFeePerDay: {type: Number, default: 3500},
+        stayFeePerDay: {type: Number, default: 700}
+        
     },
     international: {
         america: {
             travelIn: {type: Number, default: 62000},
             travelOut: {type: Number, default: 62000},
-            hotelFee: {type: Number, default: 5500}
+            hotelFeePerDay: {type: Number, default: 5500},
+            stayFeePerDay: {type: Number, default: 1700}
         },
         europe: {
             travelIn: {type: Number, default: 46000},
             travelOut: {type: Number, default: 46000},
-            hotelFee: {type: Number, default: 5500}
+            hotelFeePerDay: {type: Number, default: 5500},
+            stayFeePerDay: {type: Number, default: 1700}
         },
         asia: {
             travelIn: {type: Number, default: 21000},
             travelOut: {type: Number, default: 21000},
-            hotelFee: {type: Number, default: 5500}
+            hotelFeePerDay: {type: Number, default: 5500},
+            stayFeePerDay: {type: Number, default: 1700}
         },
         southeastAsia: {
             travelIn: {type: Number, default: 12000},
             travelOut: {type: Number, default: 12000},
-            hotelFee: {type: Number, default: 5500}
+            hotelFeePerDay: {type: Number, default: 5500},
+            stayFeePerDay: {type: Number, default: 1700}
         },
         oceania: {
             travelIn: {type: Number, default: 24000},
             travelOut: {type: Number, default: 24000},
-            hotelFee: {type: Number, default: 5500}
+            hotelFeePerDay: {type: Number, default: 5500},
+            stayFeePerDay: {type: Number, default: 1700}
         }
     }
 })
 
-module.exports = mongoose.model("Destinations", destinationSchema)
+module.exports = mongoose.model("Destination", destinationSchema)

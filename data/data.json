@@ -3,7 +3,7 @@
             "title": "White Sand Beach",
             "category": "beach",
             "location": "Boracay",
-            "image": "https://cdn.pixabay.com/photo/2017/02/14/11/12/boracay-2065643_960_720.jpg",
+            "image": "images/beach-boracay.avif",
             "description": "One of the most famous beaches all around the world. Famous for its powdery white sand and crystal clear water.",
             "showCase": ["top", "seasonal"],
             "limitedOffers": {
@@ -48,7 +48,7 @@
             "title": "Nacpan Beach",
             "category": "beach",
             "location": "El Nido, Palawan",
-            "image": "https://cdn.pixabay.com/photo/2018/09/19/07/36/palm-tree-3687964_960_720.jpg",
+            "image": "images/beach-nacpan.avif",
             "description": "Many consider this 4km white sand beach as the real hidden gem of El Nido by being untouched but full with potential.",
             "showCase": ["seasonal"],
             "limitedOffers": {
@@ -93,7 +93,7 @@
             "title": "Alona Beach",
             "category": "beach",
             "location": "Bohol",
-            "image": "https://cdn.pixabay.com/photo/2018/08/14/21/05/philippines-3606628_960_720.jpg",
+            "image": "images/beach-alona.avif",
             "description": "One of the most famous tourist spots in Bohol that consists of tranquil water and devoid rocks and corals making it a perfect place for swimming.",
             "showCase": ["none"],
             "limitedOffers": {
@@ -138,7 +138,7 @@
             "title": "Malcapuya Beach",
             "category": "beach",
             "location": "Coron, Palawan",
-            "image": "https://cdn.pixabay.com/photo/2018/04/04/08/11/sand-3289126_960_720.jpg",
+            "image": "images/beach-malcapuya.avif",
             "description": "This place is not only a great swimming spot but also offers one of the best places to snorkel and dive due to abundant marine life.",
             "showCase": ["none"],
             "limitedOffers": {
@@ -183,7 +183,7 @@
             "title": "Hidden Beach",
             "category": "beach",
             "location": "El Nido, Palawan",
-            "image": "https://cdn.pixabay.com/photo/2018/04/17/21/57/water-3328900_960_720.jpg",
+            "image": "images/beach-hidden.avif",
             "description": "Hidden yet worth finding. It's famous for its white sand beach and azure water accompanied by a breathtaking scenery of towering karst formations.",
             "showCase": ["seasonal"],
             "limitedOffers": {
@@ -228,7 +228,7 @@
             "title": "Chocolate Hills",
             "category": "landmark",
             "location": "Bohol",
-            "image": "https://images.pexels.com/photos/8095282/pexels-photo-8095282.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "image": "images/landmark-chocolate-hills.avif",
             "description": "Filled with 1260 almost symmetrical hills that all vary in heights and sizes. Legend has it that the hills were caused by a feud between two giants.",
             "showCase": ["none"],
             "limitedOffers": {
@@ -273,7 +273,7 @@
             "title": "Mayon Volcano",
             "category": "landmark",
             "location": "Albay, Bicol",
-            "image": "https://images.pexels.com/photos/2798477/pexels-photo-2798477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "image": "images/landmark-mayon-volcano.avif",
             "description": "One of the most active volanoes in the Philippines but it's still popular due to its perfect cone top and almost symmetrical shape.",
             "showCase": ["top"],
             "limitedOffers": {
@@ -318,7 +318,7 @@
             "title": "Tinuy-an Falls",
             "category": "landmark",
             "location": "Bislig, Surigao del Sur",
-            "image": "https://images.pexels.com/photos/3653963/pexels-photo-3653963.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "image": "images/landmark-tinuyan-falls.avif",
             "description": "A hidden treasure in the Philippines perfect for swimmers or anyone that just wants to counter a hot weather.",
             "showCase": ["none"],
             "limitedOffers": {
@@ -363,7 +363,7 @@
             "title": "Banaue Rice Terraces",
             "category": "landmark",
             "location": "Ifugao",
-            "image": "https://images.pexels.com/photos/2219701/pexels-photo-2219701.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "image": "images/landmark-rice-terraces.avif",
             "description": "Considered as the 'Eight Wonders of the World' and famous for its craftmanship by the Igorot people's ancestors only using minimal equipment.",
             "showCase": ["none"],
             "limitedOffers": {
@@ -408,7 +408,7 @@
             "title": "Subterranean River",
             "category": "landmark",
             "location": "Puerto Princesa, Palawan",
-            "image": "https://3m4r5618el913vtfz3jffby9-wpengine.netdna-ssl.com/wp-content/uploads/philippines-landmarks.jpg",
+            "image": "images/landmark-subterranean-river.avif",
             "description": "A hidden river that consists of limestone beds where you can ride boats to explore and enjoy its scenery.",
             "showCase": ["none"],
             "limitedOffers": {
@@ -453,7 +453,7 @@
             "title": "Rizal Park",
             "category": "history",
             "location": "Manila",
-            "image": "https://images.pexels.com/photos/6797920/pexels-photo-6797920.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+            "image": "images/history-rizal-park.avif",
             "description": "Commonly known as Luneta park, it is one of the most historical places in the Philippines because it held alot of important historical events.",
             "showCase": ["top"],
             "limitedOffers": {
@@ -498,7 +498,7 @@
             "title": "Intramuros",
             "category": "history",
             "location": "Manila",
-            "image": "https://cdn.pixabay.com/photo/2017/02/18/13/18/republic-of-the-philippines-2077194_960_720.jpg",
+            "image": "images/history-intramuros.avif",
             "description": "It's composed of many important historical sites. Take a walk of history through history and explore different museums and sites our history has to offer.",
             "showCase": ["none"],
             "limitedOffers": {
@@ -543,7 +543,7 @@
             "title": "Binondo",
             "category": "history",
             "location": "Manila",
-            "image": "https://images.pexels.com/photos/4562538/pexels-photo-4562538.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "image": "images/history-binondo.avif",
             "description": "The first and oldest Chinatown in the world. Discover the mixture of different cultures through food, festivities, events places and more.",
             "showCase": ["none"],
             "limitedOffers": {
@@ -588,7 +588,7 @@
             "title": "Calle Crisologo",
             "category": "history",
             "location": "Vigan",
-            "image": "https://cdn.pixabay.com/photo/2015/01/09/08/21/calle-crisologo-593843_960_720.jpg",
+            "image": "images/history-crisologo.avif",
             "description": "A UNESCO world heritage site that shows what a perfect spanish colonial town is in Asia. Take a journey way back to historical times.",
             "showCase": ["none"],
             "limitedOffers": {
@@ -633,7 +633,7 @@
             "title": "Corregidor Island",
             "category": "history",
             "location": "Cavite",
-            "image": "https://cdn.pixabay.com/photo/2016/07/11/05/54/corregidor-island-1509119_960_720.jpg",
+            "image": "images/history-corregidor-island.avif",
             "description": "The last military stronghold during the American occupation. Explore the tragic tales of the soldiers of World War II.",
             "showCase": ["none"],
             "limitedOffers": {
