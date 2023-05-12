@@ -39,7 +39,7 @@ const errorHandlerMiddleware = require('./middleware/error-handler');
 //);
 app.use(express.json());
 app.use(helmet());
-app.use(cors());
+app.use(cors("https://traveloga.onrender.com"));
 app.use(xss());
 
 app.use('/', express.static(path.join(__dirname, 'public'))) 
