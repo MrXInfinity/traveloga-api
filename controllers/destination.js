@@ -3,8 +3,7 @@ const { StatusCodes } = require("http-status-codes");
 const { BadRequestError, NotFoundError } = require("../errors");
 
 const getAllDestinations = async (req, res) => {
-  //req.query for selections (homepage and promotions) and categories (landmark, history, beaches)
-  const { showCase, limitedOffers, category } = req.query;
+  const { showCase, limitedOffers } = req.query;
 
   if (showCase) {
     const destinations = await Destination.find(
@@ -29,15 +28,7 @@ const getAllDestinations = async (req, res) => {
       );
     res.status(StatusCodes.OK).json(destinations);
   }
-  if (category) {
-    const destinations = await Destination.find(
-      { category },
-      "title location image _id"
-    );
-    if (!destinations)
-      throw new NotFoundError("There is no destination with this category");
-    return res.status(StatusCodes.OK).json(destinations);
-  }
+
   const beach = await Destination.find(
     { category: "beach" },
     "title location image _id"
