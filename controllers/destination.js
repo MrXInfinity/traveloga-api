@@ -51,23 +51,7 @@ const getDestination = async (req, res) => {
   res.status(StatusCodes.OK).json({ destination });
 };
 
-//ADMIN OPTIONS
-const createDestination = async (req, res) => {
-  res.send("Item created");
-};
-
-const updateDestination = async (req, res) => {
-  res.send("Item updated");
-};
-
-const deleteDestination = async (req, res) => {
-  res.send("Item deleted");
-};
-
 module.exports = {
   getAllDestinations,
   getDestination,
-  createDestination,
-  updateDestination,
-  deleteDestination,
 };

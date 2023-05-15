@@ -1,14 +1,11 @@
-const express = require("express")
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
 const {
-    getAllDestinations,
-    getDestination,
-    createDestination,
-    updateDestination,
-    deleteDestination
-} = require("../controllers/destination")
+  getAllDestinations,
+  getDestination,
+} = require("../controllers/destination");
 
-router.route("/").get(getAllDestinations)
-router.route("/:id").get(getDestination).post(createDestination).patch(updateDestination).delete(deleteDestination)
+router.route("/").get(getAllDestinations);
+router.route("/:id").get(getDestination);
 
-module.exports = router
+module.exports = router;
