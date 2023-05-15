@@ -1,6 +1,6 @@
 const Destination = require("../models/destinations");
 const { StatusCodes } = require("http-status-codes");
-const { BadRequestError, NotFoundError } = require("../errors");
+const { NotFoundError } = require("../errors");
 
 const getAllDestinations = async (req, res) => {
   const { showCase, limitedOffers } = req.query;
