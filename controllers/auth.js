@@ -3,8 +3,14 @@ const { StatusCodes } = require("http-status-codes");
 const { BadRequestError, UnauthenticatedError } = require("../errors");
 
 const register = async (req, res) => {
+  const { firstname, lastname, email, password } = req.body;
+
+  if (!firstname || !lastname || !email || !password)
+    throw new BadRequestError("Please provide the necessary info.");
+
   const user = await User.create({ ...req.body });
-  res.status(200).json({ message: "Account created successfuly" });
+  const token = user.createJWT();
+  res.status(200).json({ token, message: "Account created successfuly" });
 };
 
 const login = async (req, res) => {
@@ -18,7 +24,7 @@ const login = async (req, res) => {
     throw new UnauthenticatedError("Incorrect email and/or password.");
 
   const token = user.createJWT();
-  res.status(StatusCodes.OK).json({ token });
+  res.status(StatusCodes.OK).json(token);
 };
 
 module.exports = {
