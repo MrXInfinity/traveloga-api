@@ -45,11 +45,23 @@ const updateInfo = async (req, res) => {
 
   if (!bookings)
     throw new NotFoundError("This booking does not currently exist");
-  res.status(StatusCodes.OK).json({ message: "Successfully Updated" });
+  res.status(StatusCodes.OK).json("Successfully Updated");
 };
 
 const deleteItem = async (req, res) => {
-  res.send("item deleted");
+  const {
+    user: { userId },
+    params: { id: bookingsId },
+  } = req;
+
+  if (!userId || !bookingsId) throw new BadRequestError("Bad Request Sent!");
+  const bookings = await Bookings.findByIdAndDelete({
+    _id: bookingsId,
+    bookedBy: userId,
+  });
+
+  if (!bookings) throw new BadRequestError("Booking not found within the user");
+  res.status(StatusCodes.OK).json("Successfully Deleted");
 };
 
 module.exports = {
