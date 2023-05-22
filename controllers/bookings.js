@@ -45,7 +45,9 @@ const updateInfo = async (req, res) => {
 
   if (!bookings)
     throw new NotFoundError("This booking does not currently exist");
-  res.status(StatusCodes.OK).json("Successfully Updated");
+  res
+    .status(StatusCodes.OK)
+    .json({ bookings, message: "Successfully Updated" });
 };
 
 const deleteItem = async (req, res) => {
@@ -61,7 +63,9 @@ const deleteItem = async (req, res) => {
   });
 
   if (!bookings) throw new BadRequestError("Booking not found within the user");
-  res.status(StatusCodes.OK).json("Successfully Deleted");
+  res
+    .status(StatusCodes.OK)
+    .json({ bookings, message: "Successfully Deleted" });
 };
 
 module.exports = {
