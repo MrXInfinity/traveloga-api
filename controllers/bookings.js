@@ -37,14 +37,14 @@ const updateInfo = async (req, res) => {
       "Please specify the status you want to update to"
     );
   req.body.updatedAt = Date.now();
-  const bookings = await Bookings.findByIdAndUpdate(
+  const update = await Bookings.findByIdAndUpdate(
     { _id: id, bookedBy: userId },
     req.body,
     { new: true, runValidators: true }
   );
 
-  if (!bookings)
-    throw new NotFoundError("This booking does not currently exist");
+  if (!update) throw new NotFoundError("This booking does not currently exist");
+  const bookings = await Bookings.find({ bookedBy: req.user.userId });
   res
     .status(StatusCodes.OK)
     .json({ bookings, message: "Successfully Updated" });
@@ -57,12 +57,14 @@ const deleteItem = async (req, res) => {
   } = req;
 
   if (!userId || !bookingsId) throw new BadRequestError("Bad Request Sent!");
-  const bookings = await Bookings.findByIdAndDelete({
+  const update = await Bookings.findByIdAndDelete({
     _id: bookingsId,
     bookedBy: userId,
   });
 
-  if (!bookings) throw new BadRequestError("Booking not found within the user");
+  if (!update) throw new BadRequestError("Booking not found within the user");
+  const bookings = await Bookings.find({ bookedBy: req.user.userId });
+
   res
     .status(StatusCodes.OK)
     .json({ bookings, message: "Successfully Deleted" });
