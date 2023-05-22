@@ -44,7 +44,7 @@ const updateInfo = async (req, res) => {
   );
 
   if (!update) throw new NotFoundError("This booking does not currently exist");
-  const bookings = await Bookings.find({ bookedBy: req.user.userId });
+  const bookings = await Bookings.find({ bookedBy: userId });
   res
     .status(StatusCodes.OK)
     .json({ bookings, message: "Successfully Updated" });
@@ -63,11 +63,11 @@ const deleteItem = async (req, res) => {
   });
 
   if (!update) throw new BadRequestError("Booking not found within the user");
-  const bookings = await Bookings.find({ bookedBy: req.user.userId });
+  const bookings = await Bookings.find({ bookedBy: userId });
 
   res
     .status(StatusCodes.OK)
-    .json({ bookings, message: "Successfully Deleted" });
+    .json({ bookings: bookings ?? null, message: "Successfully Deleted" });
 };
 
 module.exports = {
