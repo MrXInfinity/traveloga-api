@@ -20,6 +20,30 @@ const getBooking = async (req, res) => {
 };
 
 const addInTheCart = async (req, res) => {
+  const {
+    travellingFromLocation,
+    regionsCategory,
+    travellingFromRegion,
+    travellingTo,
+    dateOfLeave,
+    dateOfReturn,
+    withHotel,
+    flightType,
+    amount,
+  } = req.body;
+
+  if (
+    !travellingFromLocation ||
+    !regionsCategory ||
+    !travellingFromRegion ||
+    !travellingTo ||
+    !dateOfLeave ||
+    !dateOfReturn ||
+    !withHotel ||
+    !flightType ||
+    !amount
+  )
+    throw new BadRequestError("Incomplete Info Sent!");
   req.body.bookedBy = req.user.userId;
   await Bookings.create(req.body);
   res.status(StatusCodes.OK).json({ message: "Booking Successful!" });
